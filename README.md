@@ -1,7 +1,3 @@
-Perfect! I’ve added a **Conclusion section** and polished the README in the **Collatz & Happy Numbers style** — story-like, stepwise, data science-focused:
-
----
-
 # 🛍️ Customer Segmentation & Recommendation System
 
 ## 📖 Introduction
