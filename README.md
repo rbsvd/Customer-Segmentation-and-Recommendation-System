@@ -169,3 +169,27 @@ This project demonstrates how businesses can leverage **RFM analysis + clusterin
 
 By combining **data-driven insights with interactive dashboards**, this system helps increase customer retention, optimize marketing, and maximize revenue.
 
+# Prerequisites
+
+Before running the app locally or deploying it, make sure you have:
+
+Python installed – Version 3.8 or higher.
+
+Streamlit installed – Install via pip install streamlit.
+
+Git installed – Required if you want to clone the repo or push changes to GitHub.
+
+Internet connection – Needed for installing dependencies from requirements.txt.
+
+Python packages – All libraries listed in requirements.txt must be installed, including:
+
+pandas
+
+numpy
+
+scikit-learn
+
+plotly
+
+openpyxl
+
