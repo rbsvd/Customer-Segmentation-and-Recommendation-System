@@ -1,65 +1,174 @@
 # 🛍️ Customer Segmentation and Recommendation System
 
-This project implements a data-driven customer segmentation and recommendation engine using the Online Retail dataset. The system leverages RFM (Recency, Frequency, Monetary) analysis, clustering techniques, and a lightweight recommendation algorithm to provide personalized product suggestions.
+📌 Project Overview
 
-To make insights accessible, the system is deployed as a Streamlit dashboard that allows business teams to explore customer behavior, analyze product trends, and get real-time recommendations without writing code.
+This project analyzes customer purchasing behavior using online retail transaction data and builds a recommendation system to provide personalized product suggestions. It combines customer segmentation (RFM + clustering) with recommendation models to help businesses improve retention, marketing, and revenue.
 
-🎯 Objective
+🎯 Objectives
 
-Segment customers based on purchasing patterns
+Segment customers based on Recency, Frequency, and Monetary (RFM) values.
 
-Identify high-value customers for targeted campaigns
+Apply clustering techniques (KMeans, Agglomerative) to group similar customers.
 
-Build a simple recommendation engine for product suggestions
+Perform exploratory data analysis (EDA) to uncover sales trends, top products, and customer patterns.
 
-Provide an interactive dashboard for visualization & exploration
+Build recommendation systems (collaborative & content-based filtering).
 
-💼 Business Use Case
+Create an interactive dashboard with Streamlit for visualization and recommendations.
 
-Retail businesses face challenges like:
+📦 Dataset
 
-Identifying loyal vs. one-time buyers
+Source: Online Retail dataset (transactions from a UK-based retailer).
 
-Targeting the right customers with promotions
+Size: ~500K rows
 
-Recommending products to increase cross-sell & up-sell opportunities
+Key Columns:
 
-This project provides:
-✔️ Customer insights (segmentation, behavior patterns)
-✔️ Top product analysis (popular items, sales drivers)
-✔️ Personalized recommendations (per customer ID)
-✔️ Visual analytics dashboard for business users
+InvoiceNo, StockCode, Description
+
+Quantity, InvoiceDate, UnitPrice
+
+CustomerID, Country
+
+🛠️ Methodology
+
+Data Preprocessing
+
+Removed missing values, duplicates, and invalid entries.
+
+Created new features such as TotalPrice (Quantity × UnitPrice).
+
+Exploratory Data Analysis (EDA)
+
+Sales trend over time.
+
+Top-selling products.
+
+Customer purchase behavior distribution.
+
+Customer Segmentation (RFM + Clustering)
+
+Calculated Recency, Frequency, Monetary values for each customer.
+
+Applied KMeans (k=4) and Agglomerative clustering.
+
+Segmented customers into 4 key groups (loyal, high spenders, at-risk, and inactive).
+
+Recommendation System
+
+Collaborative Filtering: Product recommendations based on similar customers.
+
+Content-Based Filtering: Recommendations using product features and purchase history.
+
+Dashboard (Streamlit)
+
+Sales trends visualization.
+
+Top 10 products chart.
+
+Customer segmentation overview.
+
+Interactive customer-specific recommendations.
 
 ⚙️ Prerequisites
 
-Python ≥ 3.8
+Make sure you have installed:
 
-Installed packages:
-
-pip install streamlit pandas plotly scikit-learn openpyxl
-
-
-Dataset files:
-
-OnlineRetail.xlsx (raw data)
-
-rfm_clusters.csv (pre-computed RFM + clustering results)
-
-📂 Project Structure
-📦 customer-segmentation-recommendation-system
- ┣ 📜 customer_dashboard.py     # Streamlit dashboard
- ┣ 📜 OnlineRetail.xlsx         # Input dataset
- ┣ 📜 rfm_clusters.csv          # Pre-computed RFM segments
- ┣ 📜 README.md                 # Documentation
- ┗ 📜 reports                   # Detailed project report
+python >= 3.9
+pip >= 21.0
 
 
-🔮 Future Scope
+Libraries needed (already in requirements.txt):
 
-Integrate Collaborative Filtering (CF) and Content-based Filtering
+pandas
 
-Real-time API deployment (Flask/FastAPI + Streamlit)
+numpy
 
-Automated marketing strategies per segment
+scikit-learn
 
-Deploy on cloud (Heroku/Streamlit Cloud/AWS)
+matplotlib
+
+seaborn
+
+plotly
+
+streamlit
+
+openpyxl
+
+Install all at once:
+
+pip install -r requirements.txt
+
+📊 Dashboard Features
+
+Sales Trend Over Time: Identify seasonal trends and peaks.
+
+Top Products: Best-selling products.
+
+Customer Segments: Distribution of customer clusters.
+
+Personalized Recommendations: Enter/select a CustomerID to view tailored product suggestions.
+
+📈 Results
+
+From the analysis and modeling:
+
+Customer Segmentation:
+
+Optimal 4 clusters (KMeans) found.
+
+Segments included high-value loyal customers, frequent buyers, price-sensitive, and at-risk groups.
+
+Recommendation System Evaluation (Top-5):
+
+Average Precision@5: 0.8529
+
+Average Recall@5: 0.5453
+
+MAP@5 (Mean Average Precision): 0.8865
+
+Insights:
+
+A small % of customers contribute to ~80% of revenue (Pareto principle).
+
+Top products are decor, gifts, and seasonal items.
+
+Recommendations generated personalized product suggestions per customer ID.
+
+🚀 How to Run
+
+Clone this repo:
+
+git clone https://github.com/your-username/customer-segmentation-recommendation.git
+cd customer-segmentation-recommendation
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run Streamlit Dashboard:
+
+streamlit run customer_dashboard.py
+
+🔮 Future Enhancements
+
+Deploy recommendation API for real-time use.
+
+Add deep learning-based recommender systems (e.g., neural collaborative filtering).
+
+Enhance dashboard with advanced filters (date range, region, product categories).
+
+📚 Tech Stack
+
+Python, Pandas, NumPy, Scikit-learn – Data processing & modeling
+
+Matplotlib, Seaborn, Plotly – Visualization
+
+Streamlit – Interactive dashboard
+
+Excel/CSV Dataset – Data source
+
+✨ This project demonstrates how businesses can leverage data science to better understand customers and provide personalized shopping experiences
