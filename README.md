@@ -1,6 +1,3 @@
-Perfect! Now we have the **actual top products from your notebook**. I can update the **README mockup** so it reflects your project data **accurately**, including the **dashboard-style table with emojis for segments**. Here’s the updated version:
-
----
 
 # 🛍️ Customer Segmentation and Recommendation System
 
