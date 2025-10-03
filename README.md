@@ -78,7 +78,7 @@ python >= 3.9
 pip >= 21.0
 
 
-Libraries needed (already in requirements.txt):
+Libraries needed:
 
 pandas
 
@@ -95,10 +95,6 @@ plotly
 streamlit
 
 openpyxl
-
-Install all at once:
-
-pip install -r requirements.txt
 
 📊 Dashboard Features
 
